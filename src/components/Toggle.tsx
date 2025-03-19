@@ -22,7 +22,7 @@ const Toggle: React.FC<ToggleProps> = ({
 
   // Determine which icon and text to show based on current audience
   const Icon = audience === 'restaurant' ? User : Users;
-  const buttonText = audience === 'restaurant' ? 'Usuarios' : 'Establecimientos';
+  const buttonText = audience === 'restaurant' ? 'Usuarios' : 'Negocios';
 
   return (
     <div className={cn("flex items-center justify-center", className)}>

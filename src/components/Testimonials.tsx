@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Lo que dicen nuestros usuarios</h2>
-          <p className="text-lg text-foreground/70">Descubra cómo QuickTab está transformando la experiencia de pago en establecimientos y bares.</p>
+          <p className="text-lg text-foreground/70">Descubra cómo QuickTab está transformando la experiencia de pago en restaurantes, bares, antros, y eventos.</p>
         </div>
 
         <div className="relative">

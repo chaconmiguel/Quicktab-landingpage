@@ -38,27 +38,21 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
         <div className="flex flex-col items-center text-center">
           <div className="w-full max-w-3xl mb-12 z-10">
             <div key={audience} className="animate-fade-in">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
+              <div 
                 className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-quicktab-blue mb-6 border border-blue-200/50 shadow-md transform-gpu"
               >
                 <span className="text-xs font-semibold uppercase tracking-wider">
-                  {audience === 'restaurant' ? 'Para Establecimientos' : 'Para Usuarios'}
+                  {audience === 'restaurant' ? 'Para Negocios' : 'Para Usuarios'}
                 </span>
-              </motion.div>
+              </div>
 
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
+              <h1 
                 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 leading-[1.15] md:leading-[1.15] lg:leading-[1.15] pb-1 transform-gpu"
               >
                 {audience === 'restaurant' ? (
                   <>
-                    <div className="mb-4 transform-gpu">Transforma la experiencia</div>
-                    <div className="mb-4 transform-gpu">de pago en tu</div>
+                    <div className="mb-4 transform-gpu bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900">Transforma la experiencia</div>
+                    <div className="mb-4 transform-gpu bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900">de pago en tu</div>
                     <div className="mx-auto w-[300px] md:w-[400px] transform-gpu">
                       <MorphingText 
                         texts={venueTypes}
@@ -67,21 +61,15 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
                     </div>
                   </>
                 ) : heroContent.title}
-              </motion.h1>
+              </h1>
 
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.15 }}
+              <p 
                 className="text-lg text-foreground/80 mb-8 mx-auto max-w-xl text-balance transform-gpu"
               >
                 {heroContent.subtitle}
-              </motion.p>
+              </p>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
+              <div 
                 className="flex flex-wrap justify-center gap-4 transform-gpu"
               >
                 <ShimmerButton
@@ -114,7 +102,7 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
                     <ArrowRight className="ml-2 h-5 w-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                   </a>
                 </ShimmerButton>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>

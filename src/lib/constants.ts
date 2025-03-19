@@ -92,7 +92,7 @@ export const content: Record<AudienceType, ContentData> = {
 export const testimonials = [
   {
     name: "María González",
-    role: "Gerente, Restaurante El Jardín",
+    role: "Gerente, Negocio El Jardín",
     quote: "QuickTab ha revolucionado cómo manejamos los pagos. Nuestros clientes están encantados con la facilidad para dividir la cuenta, y nuestro personal puede concentrarse en brindar un excelente servicio en lugar de procesar pagos.",
     image: "/maria-gonzalez.jpg"
   },
@@ -104,7 +104,7 @@ export const testimonials = [
   },
   {
     name: "Ana Martínez",
-    role: "Gerente, Establecimiento El Jardín",
+    role: "Gerente, Negocio El Jardín",
     quote: "QuickTab ha revolucionado completamente la forma en que manejamos los pagos. Nuestros clientes están encantados con la rapidez del servicio.",
     image: "/ana-martinez.jpg"
   }

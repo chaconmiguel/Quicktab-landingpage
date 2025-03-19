@@ -66,52 +66,32 @@ const Benefits: React.FC<BenefitsProps> = ({ audience }) => {
 
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3 }}
+          <div 
             className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-quicktab-blue mb-4"
           >
             <span className="text-xs font-semibold uppercase tracking-wider">Características</span>
-          </motion.div>
+          </div>
           
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.1 }}
+          <h2 
             className="text-3xl md:text-4xl font-bold mb-4 transform-gpu"
           >
             {benefitsContent.title}
-          </motion.h2>
+          </h2>
           
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.15 }}
+          <p 
             className="text-lg text-foreground/70 transform-gpu"
           >
             {benefitsContent.subtitle}
-          </motion.p>
+          </p>
         </div>
 
-        <motion.div
+        <div
           key={audience}
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
         >
           {benefitsContent.items.map((benefit, index) => (
-            <motion.div
+            <div
               key={benefit.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
               className="bg-white/90 rounded-xl shadow-[0_8px_20px_-12px_rgba(0,0,0,0.2)] relative group overflow-hidden hover:-translate-y-1 hover:scale-[1.01] transition-all duration-200 ease-out transform-gpu"
             >
               {/* Soft white gradient overlay */}
@@ -128,9 +108,9 @@ const Benefits: React.FC<BenefitsProps> = ({ audience }) => {
                   <p className="text-sm md:text-base text-quicktab-gray leading-relaxed">{benefit.description}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

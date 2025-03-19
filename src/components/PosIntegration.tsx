@@ -43,11 +43,7 @@ const PosIntegration: React.FC<PosIntegrationProps> = ({ audience }) => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-10 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-8 md:mb-16"
         >
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/50 text-quicktab-blue mb-4 md:mb-6 border border-blue-200/50 backdrop-blur-sm">
@@ -61,7 +57,7 @@ const PosIntegration: React.FC<PosIntegrationProps> = ({ audience }) => {
             Conectamos QuickTab con tu sistema actual de manera segura y eficiente, 
             sin interrumpir tus operaciones diarias.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-4 md:gap-8">
           <motion.div

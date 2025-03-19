@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <Logo />
             <p className="mt-4 text-sm md:text-base text-foreground/80 max-w-xs">
-              Transformando la experiencia de pago en establecimientos.
+              Transformando la experiencia de pago en restaurantes, bares, antros, y eventos.
             </p>
             <div className="flex space-x-3 md:space-x-4 mt-6">
               {footerLinks.social.map((social) => (

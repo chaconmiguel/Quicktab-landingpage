@@ -78,7 +78,7 @@ export const WaitlistDialog: React.FC<WaitlistDialogProps> = ({
           <DialogTitle className="text-xl font-bold">Únete a la Lista de Espera</DialogTitle>
           <DialogDescription className="text-foreground/70">
             {audience === 'restaurant' 
-              ? 'Recibe acceso prioritario a QuickTab para tu establecimiento.' 
+              ? 'Recibe acceso prioritario a QuickTab para tu negocio.' 
               : 'Sé de los primeros en utilizar QuickTab como usuario.'}
           </DialogDescription>
         </DialogHeader>
