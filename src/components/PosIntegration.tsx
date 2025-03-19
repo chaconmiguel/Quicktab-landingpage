@@ -13,7 +13,8 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    className="bg-white/90 rounded-xl shadow-[0_8px_20px_-12px_rgba(0,0,0,0.2)] relative group overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out"
+    transition={{ duration: 0.3 }}
+    className="bg-white/90 rounded-xl shadow-[0_8px_20px_-12px_rgba(0,0,0,0.2)] relative group overflow-hidden hover:-translate-y-1 hover:scale-[1.01] transition-all duration-200 ease-out transform-gpu"
   >
     {/* Soft white gradient overlay */}
     <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-white/30 rounded-xl" />
@@ -23,7 +24,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
     <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px] rounded-xl" />
     {/* Content */}
     <div className="relative min-h-[160px] p-4 md:p-6 flex items-start gap-3 md:gap-4">
-      <Icon className="w-6 h-6 md:w-8 md:h-8 text-quicktab-blue flex-shrink-0 group-hover:rotate-6 transition-transform" />
+      <Icon className="w-6 h-6 md:w-8 md:h-8 text-quicktab-blue flex-shrink-0 group-hover:rotate-6 transition-transform transform-gpu" />
       <div>
         <h3 className="font-semibold text-gray-900 mb-2 text-lg md:text-xl">{title}</h3>
         <p className="text-sm md:text-base text-quicktab-gray leading-relaxed">{description}</p>

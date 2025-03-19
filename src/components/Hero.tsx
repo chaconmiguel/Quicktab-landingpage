@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
   const heroContent = content[audience].hero;
   
-  const venueTypes = ['establecimiento', 'bar', 'antro', 'eventos'];
+  const venueTypes = ['Restaurante', 'Bar', 'Antro', 'Evento'];
 
   return (
     <section 
@@ -41,8 +41,8 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-quicktab-blue mb-6 border border-blue-200/50 shadow-md"
+                transition={{ duration: 0.3 }}
+                className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-quicktab-blue mb-6 border border-blue-200/50 shadow-md transform-gpu"
               >
                 <span className="text-xs font-semibold uppercase tracking-wider">
                   {audience === 'restaurant' ? 'Para Establecimientos' : 'Para Usuarios'}
@@ -52,14 +52,14 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 leading-[1.15] md:leading-[1.15] lg:leading-[1.15] pb-1"
+                transition={{ duration: 0.3, delay: 0.1 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900 leading-[1.15] md:leading-[1.15] lg:leading-[1.15] pb-1 transform-gpu"
               >
                 {audience === 'restaurant' ? (
                   <>
-                    <div className="mb-4">Transforma la experiencia</div>
-                    <div className="mb-4">de pago en tu</div>
-                    <div className="mx-auto w-[300px] md:w-[400px]">
+                    <div className="mb-4 transform-gpu">Transforma la experiencia</div>
+                    <div className="mb-4 transform-gpu">de pago en tu</div>
+                    <div className="mx-auto w-[300px] md:w-[400px] transform-gpu">
                       <MorphingText 
                         texts={venueTypes}
                         className="!h-16 md:!h-16 lg:!h-20 !text-[2.5rem] md:!text-[3.5rem] lg:!text-[4.5rem] text-quicktab-blue !max-w-none"
@@ -72,8 +72,8 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-lg text-foreground/80 mb-8 mx-auto max-w-xl text-balance"
+                transition={{ duration: 0.3, delay: 0.15 }}
+                className="text-lg text-foreground/80 mb-8 mx-auto max-w-xl text-balance transform-gpu"
               >
                 {heroContent.subtitle}
               </motion.p>
@@ -81,8 +81,8 @@ const Hero: React.FC<HeroProps> = ({ audience }) => {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex flex-wrap justify-center gap-4"
+                transition={{ duration: 0.3, delay: 0.2 }}
+                className="flex flex-wrap justify-center gap-4 transform-gpu"
               >
                 <ShimmerButton
                   onClick={() => setWaitlistOpen(true)}

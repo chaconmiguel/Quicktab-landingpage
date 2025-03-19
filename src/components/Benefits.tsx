@@ -70,6 +70,7 @@ const Benefits: React.FC<BenefitsProps> = ({ audience }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 text-quicktab-blue mb-4"
           >
             <span className="text-xs font-semibold uppercase tracking-wider">Características</span>
@@ -79,8 +80,8 @@ const Benefits: React.FC<BenefitsProps> = ({ audience }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            transition={{ duration: 0.3, delay: 0.1 }}
+            className="text-3xl md:text-4xl font-bold mb-4 transform-gpu"
           >
             {benefitsContent.title}
           </motion.h2>
@@ -89,8 +90,8 @@ const Benefits: React.FC<BenefitsProps> = ({ audience }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-foreground/70"
+            transition={{ duration: 0.3, delay: 0.15 }}
+            className="text-lg text-foreground/70 transform-gpu"
           >
             {benefitsContent.subtitle}
           </motion.p>
@@ -101,7 +102,7 @@ const Benefits: React.FC<BenefitsProps> = ({ audience }) => {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6"
         >
           {benefitsContent.items.map((benefit, index) => (
@@ -110,8 +111,8 @@ const Benefits: React.FC<BenefitsProps> = ({ audience }) => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white/90 rounded-xl shadow-[0_8px_20px_-12px_rgba(0,0,0,0.2)] relative group overflow-hidden hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300 ease-out"
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              className="bg-white/90 rounded-xl shadow-[0_8px_20px_-12px_rgba(0,0,0,0.2)] relative group overflow-hidden hover:-translate-y-1 hover:scale-[1.01] transition-all duration-200 ease-out transform-gpu"
             >
               {/* Soft white gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-white/30 rounded-xl" />
